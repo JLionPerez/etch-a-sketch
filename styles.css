@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas {
+    display: flex;
+    height: 960px;
+    width: 960px;
+    border: solid;
+    padding: 0;
+    flex-flow: column wrap;
+}
+
+.row {
+    display: flex;
+    flex-grow: 1;
+}
+
+.cell {
+    border: 1px solid;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
