@@ -10,11 +10,18 @@ let createGrid = (num) => {
         for(let j = 0; j < num; j++) {
             const cell = document.createElement('div');
             cell.setAttribute("class","cell");
+            colorOver(cell);
             row.appendChild(cell);
         }
     canvas.appendChild(row)
     }
-    
+
 }
 
-createGrid(50)
+let colorOver = (obj) => {
+    obj.addEventListener("mouseover", (event) => {
+        event.target.style.background = "black"
+    });
+}
+
+createGrid(100)
