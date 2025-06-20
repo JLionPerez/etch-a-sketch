@@ -24,9 +24,18 @@ let createGrid = (num) => {
     }
 }
 
+let randomColor = () => {
+    let values = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += values[Math.floor(Math.random() * values.length)];
+    }
+    return color;
+}
+
 let colorOver = (obj) => {
     obj.addEventListener("mouseover", (event) => {
-        event.target.style.background = "black"
+        event.target.style.background = randomColor();
     });
 }
 
